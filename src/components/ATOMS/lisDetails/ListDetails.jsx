@@ -15,6 +15,9 @@ const useStyle = makeStyles({
 const ListDetails = ({ slug, titles, rank, house }) => {
   let history = useHistory();
   const classes = useStyle();
+  const gotToBack = () => {
+    history.push("/characters");
+  };
   return (
     <>
       <Ul>
@@ -28,7 +31,7 @@ const ListDetails = ({ slug, titles, rank, house }) => {
         size="large"
         variant="contained"
         color="default"
-        onClick={() => history.push("/characters")}
+        onClick={() => gotToBack()}
       >
         Back
       </Button>

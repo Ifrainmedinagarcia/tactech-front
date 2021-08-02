@@ -19,7 +19,7 @@ const GridStart = ({ postCharacter, characters, charactersAll }) => {
   const [loading, setLoading] = useState(false);
 
   const createCharacters = () => {
-    if (charactersAll !== undefined) {
+    if (charactersAll.length !== 0) {
       return history.push("/characters");
     } else {
       postCharacter();
